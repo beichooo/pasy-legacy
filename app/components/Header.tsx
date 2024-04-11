@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import donateButtonIcon from "../public/navbar-button-heart.svg";
+import donateButtonIcon from "@/public/navbar-button-heart.svg";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex items-center justify-between px-4 py-2 bg-pasy-brown-bg">
+    <header className="flex items-center justify-between px-4 py-2">
       <div className="flex items-center">
         <h1 className="text-[32px] font-fredoka font-semibold text-pasy-brown-text">
           PASY
