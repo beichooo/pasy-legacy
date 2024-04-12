@@ -6,6 +6,7 @@ import petsHouseInfo from "@/public/home-info-pet-house.svg";
 import questionMark from "@/public/home-question-mark.svg";
 import petFace from "@/public/home-pet-face.svg";
 import ItemList from "./components/ItemList";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -72,10 +73,13 @@ export default function Home() {
           <div></div>
         </section>
         <section>
-          <h2>Mascotas cerca de ti</h2>
+          <h2 className="font-fredoka text-3xl text-pasy-brown-text text-center mt-6 font-medium">
+            Mascotas cerca de ti
+          </h2>
           <ItemList />
         </section>
       </main>
+      <Footer />
     </>
   );
 }
