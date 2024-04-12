@@ -2,14 +2,18 @@ import Header from "@/app/components/Header";
 import Image from "next/image";
 import pawIcon from "@/public/button-paw.svg";
 import heroImage from "@/public/hero-img.svg";
+import petsHouseInfo from "@/public/home-info-pet-house.svg";
+import questionMark from "@/public/home-question-mark.svg";
+import petFace from "@/public/home-pet-face.svg";
+import ItemList from "./components/ItemList";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main className="p-2">
+      <main>
         {/* hero section*/}
-        <section className="flex justify-center flex-col align-middle">
+        <section className="flex justify-center flex-col align-middle p-2">
           {/* TODO: Adjust the image for the white space */}
           <Image
             src={heroImage}
@@ -28,10 +32,48 @@ export default function Home() {
           </p>
         </section>
         {/* more info section*/}
-        <section className="bg-pasy-brown-text">
-          <h2 className="text-white font-rubik font-semibold text-[32px]">
+        <section className="flex flex-col bg-pasy-brown-text p-2">
+          <h2 className="font-rubik text-white  font-semibold text-[32px] text-center">
             Más información
           </h2>
+          <div className="flex flex-col gap-2 p-4 bg-white rounded-2xl max-w-[500px min-w-[300px] mx-auto">
+            <Image
+              src={petsHouseInfo}
+              alt="pets with a house"
+              className="self-center"
+            />
+            <h3 className="font-fredoka text-pasy-brown-text text-2xl font-medium self-center">
+              ¿Cómo puedo adoptar?
+            </h3>
+          </div>
+
+          <div className="flex flex-row m-auto gap-2 max-w-[300px] space-x-1 mt-4">
+            <div className="font-fredoka flex flex-col bg-white align-middle justify-center rounded-2xl p-4">
+              <Image
+                src={questionMark}
+                alt="a question mark icon"
+                className="self-center"
+              />
+              <p className="text-center self-center text-pasy-brown-text font-medium text-[16px]">
+                Preguntas frecuentes
+              </p>
+            </div>
+            <div className="font-fredoka flex flex-col bg-white align-middle justify-center rounded-2xl p-4">
+              <Image
+                src={petFace}
+                alt="a pet face icon"
+                className="self-center"
+              />
+              <p className="text-center self-center text-pasy-brown-text font-medium text-[16px]">
+                ¿Cómo dar en adopción?
+              </p>
+            </div>
+          </div>
+          <div></div>
+        </section>
+        <section>
+          <h2>Mascotas cerca de ti</h2>
+          <ItemList />
         </section>
       </main>
     </>
