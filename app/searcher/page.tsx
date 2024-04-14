@@ -5,7 +5,7 @@ const Searcher: React.FC = () => {
   return (
     <>
       <Header />
-      <h1 className=" text-center font-fredoka text-2xl text-pasy-brown-text font-medium">
+      <h1 className=" text-center font-fredoka text-3xl text-pasy-brown-text font-medium">
         Buscador de mascotas
       </h1>
       <div>
